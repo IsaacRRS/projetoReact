@@ -1,4 +1,5 @@
 import Celular from "@/components/Celular";
+import { Icones } from "@/components/Icones";
 import { Analises } from "@/components/Analises";
 import WidthMaximo from "@/components/WidthMaximo";
 import { ArrowBigUp, Award, Brain, Check, GraduationCap, MoveRight, OctagonAlert, Shield, Star } from "lucide-react";
