@@ -1,6 +1,9 @@
+import Celular from "@/components/Celular";
+import { Analises } from "@/components/Analises";
 import WidthMaximo from "@/components/WidthMaximo";
 import { ArrowBigUp, Award, Brain, Check, GraduationCap, MoveRight, OctagonAlert, Shield, Star } from "lucide-react";
 import Link from "next/link";
+import { buttonVariants } from "@/components/ui/button";
 
 export default function Home() {
   return (
@@ -148,3 +151,91 @@ export default function Home() {
                 <div className="flex flex-col">
                   <p className="font-semibold">Rodholfo</p>
                   <div className="flex gap-1.5 items-center text-zinc-600">
+                    <Check className="h-4 w-4 stroke-[3px] text-green-600" />
+                    <p className="text-sm"> Compra verificada </p>
+                  </div>
+                  <div className="flex gap-0.5 mb-2">
+                <Star className="h5 w-5 text-yellow-500 fill-yellow-500" />
+                <Star className="h5 w-5 text-yellow-500 fill-yellow-500" />
+                <Star className="h5 w-5 text-yellow-500 fill-yellow-500" />
+                <Star className="h5 w-5 text-yellow-500 fill-yellow-500" />
+                <Star className="h5 w-5 text-yellow-500 fill-yellow-500" />
+              </div>  
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-auto flex-col gap-4 lg:pr-8 xl:pr-20">
+              <div className="text-lg leading-8">
+                <p>
+                .................................................... .................................................... .................................................... .................................................... .................................................... 
+                </p>
+              </div>
+              <div className="flex gap-4 mt-2">
+                <img className="rounded-full h-12 w-12 object-cover" src="pessoa1.png"/>
+                <div className="flex flex-col">
+                  <p className="font-semibold">Toji</p>
+                  <div className="flex gap-1.5 items-center text-zinc-600">
+                    <GraduationCap className="h-4 w-4 stroke-[3px] text-orange-600" />
+                    <p className="text-sm"> ?? </p>
+                  </div>
+                  <div className="flex gap-0.5 mb-2">
+                <Star className="h5 w-5 text-yellow-500 fill-yellow-500" />
+                <Star className="h5 w-5 text-yellow-500 fill-yellow-500" />
+                <Star className="h5 w-5 text-yellow-500 fill-yellow-500" />
+                <Star className="h5 w-5 text-yellow-500 fill-yellow-500" />
+                <Star className="h5 w-5 text-yellow-500 fill-yellow-500" />
+              </div>  
+                </div>
+              </div>
+            </div>
+          </div>
+        </WidthMaximo>
+        <div className="pt-16">
+          <Analises />
+        </div>
+      </section>
+      <section>
+        <WidthMaximo className="py-24">
+          <div className="mb-12 px-6 lg:px-8">
+            <div className="mx-auto max-w-2xl sm:text-center">
+              <h2 className="order-1 mt-2 tracking-tight text-center text-balance !leading-tight font-bold text-5xl md:text-6xl text-gray-900">Mande sua <span className="relative px-2">IMAGEM <Icones.underline className='hidden sm:block pointer-events-none absolute inset-x-0 -bottom-6 text-red-900' /></span> aqui</h2>
+            </div>
+          </div>
+          <div className="mx-auto max-w-6xl px-6 lg:px-8">
+            <div className="relative flex flex-col items-center md:grid grid-cols-2 gap-40">
+              <MoveRight className="text-xl absolute top-[25rem] md:top-1/2 -translate-y-1/2 z-10 left-1/2 -translate-x-1/2 rotate-90 md:rotate-0"></MoveRight>
+              <div className="relative h-80 md:h-full w-full md:justify-self-end max-w-sm rounded-xl bg-gray-900 ring-inset ring-gray-900 lg:rounded-2xl">
+                <img className="shadow-2xl ring-2 ring-red-900 h-full w-full object-cover bg-white rounded-lg" src="./gatopreto.jpg" />
+              </div>
+              <Celular className="w-60" imgSrc="./gatopreto.jpg" />
+            </div>
+          </div>
+          <ul className="mx-auto mt-12 max-w-prose sm:text-lg space-y-2 w-fit">
+            <li className="w-fit">
+              <Check className="h-5 w-5 text-green-700 inline mr-1.5"></Check>
+              Qualidade 1
+            </li>
+            <li className="w-fit">
+              <Check className="h-5 w-5 text-green-700 inline mr-1.5"></Check>
+              Qualidade 2
+            </li>
+            <li className="w-fit">
+              <Check className="h-5 w-5 text-green-700 inline mr-1.5"></Check>
+              Qualidade 3
+            </li>
+            <div className="flex justify-center">
+              <Link className={buttonVariants({
+
+                size: 'lg',
+                className: 'mx-auto mt-8'
+              })} href='/config/upload'>Crie aqui 
+              <ArrowBigUp className="relative left-3 h-4 w-4 ml-1.6"></ArrowBigUp>
+
+              </Link>
+            </div>
+          </ul>
+        </WidthMaximo>
+      </section>
+    </div>
+  );
+}
